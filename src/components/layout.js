@@ -1,7 +1,12 @@
-import React from "react"
 import { Link } from "gatsby"
+import { ThemeToggler } from "gatsby-plugin-dark-mode"
+import React from "react"
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { rhythm, scale } from "../utils/typography"
+import "./layout.scss"
+import "./prism.scss"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -53,12 +58,29 @@ const Layout = ({ location, title, children }) => {
       style={{
         marginLeft: `auto`,
         marginRight: `auto`,
-        maxWidth: rhythm(24),
+        maxWidth: rhythm(28),
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
+      className="main-container"
     >
       <header>{header}</header>
-      <main>{children}</main>
+      <main>
+        <ThemeToggler>
+          {({ theme, toggleTheme }) => (
+            <button
+              className="light-dark-btn"
+              onClick={() => toggleTheme(theme === "dark" ? "light" : "dark")}
+            >
+              {theme === "dark" ? (
+                <FontAwesomeIcon icon={faSun} />
+              ) : (
+                <FontAwesomeIcon icon={faMoon} />
+              )}
+            </button>
+          )}
+        </ThemeToggler>
+        {children}
+      </main>
       <footer>
         © {new Date().getFullYear()}
         {` `}
