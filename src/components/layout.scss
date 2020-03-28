@@ -1,0 +1,252 @@
+// Dark Mode ==============
+$bg: #3a2435;
+$text: #f5f5f5;
+$section: #0f0a0e;
+$accent-one: #febd62;
+$accent-two: #ffa4f7;
+// Light Mode ==============
+$bg-light: #bed8d4;
+$text-light: #2e3e47;
+$section-light: #f7f9f9;
+$accent-one-light: #0d9986;
+$accent-two-light: #10a0aa;
+
+body {
+  .main-container {
+    position: relative;
+    a {
+      text-decoration: none;
+    }
+
+    .light-dark-btn {
+      right: 22.5px;
+      padding: 0;
+      top: 35px;
+      border: none;
+      appearance: none;
+      font-size: 1.6rem;
+      position: absolute;
+      background-color: transparent;
+      &:active,
+      &:focus {
+        outline: none;
+      }
+    }
+
+    blockquote {
+      font-style: italic;
+      padding-left: 1rem;
+    }
+  }
+}
+
+.dark {
+  color: $text;
+  background-color: $bg;
+
+  .main-container {
+    background-color: $section;
+
+    .light-dark-btn {
+      color: $accent-one;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: $accent-one;
+    }
+
+    h4,
+    h5,
+    h6 {
+      color: $accent-two;
+    }
+
+    a {
+      color: $accent-two;
+    }
+
+    blockquote {
+      color: darken($text, 10%);
+      border-left: 4px solid $bg;
+    }
+
+    // Prism Js Styles ===========
+    code[class*="language-"],
+    pre[class*="language-"] {
+      color: darken($text, 20%);
+    }
+    :not(pre) > code[class*="language-"],
+    pre[class*="language-"] {
+      background: lighten($section, 5%);
+    }
+    pre[class*="language-"] {
+      &::-webkit-scrollbar {
+        background-color: $section;
+      }
+      &::-webkit-scrollbar-thumb {
+        border: 2px solid $section;
+        background-color: $bg;
+      }
+    }
+    .token.comment,
+    .token.block-comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+      color: darken($text, 40%);
+    }
+    .token.punctuation {
+      color: darken($accent-one, 35%);
+    }
+    .token.tag,
+    .token.attr-name,
+    .token.namespace,
+    .token.deleted {
+      color: $accent-one;
+    }
+    .token.function-name {
+      color: $accent-two;
+    }
+    .token.boolean,
+    .token.number,
+    .token.function {
+      color: $accent-one;
+    }
+    .token.property,
+    .token.class-name,
+    .token.constant,
+    .token.symbol {
+      color: $accent-one;
+    }
+    .token.selector,
+    .token.important,
+    .token.atrule,
+    .token.keyword,
+    .token.builtin {
+      color: $accent-two;
+    }
+    .token.string,
+    .token.char,
+    .token.attr-value,
+    .token.regex,
+    .token.variable {
+      color: lighten($accent-two, 8%);
+    }
+    .token.operator,
+    .token.entity,
+    .token.url {
+      color: lighten($accent-one, 10%);
+    }
+    .token.inserted {
+      color: darken($accent-two, 35%);
+    }
+    // Prism Js Styles ===========
+  }
+}
+.light {
+  color: $text-light;
+  background-color: $bg-light;
+
+  .main-container {
+    background-color: $section-light;
+
+    .light-dark-btn {
+      color: $accent-one-light;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: $accent-one-light;
+    }
+
+    h4,
+    h5,
+    h6 {
+      color: $accent-two-light;
+    }
+
+    a {
+      color: $accent-two-light;
+    }
+
+    blockquote {
+      color: lighten($text-light, 10%);
+      border-left: 4px solid $bg-light;
+    }
+
+    // Prism Js Styles ===========
+    code[class*="language-"],
+    pre[class*="language-"] {
+      color: lighten($text-light, 10%);
+    }
+    :not(pre) > code[class*="language-"],
+    pre[class*="language-"] {
+      background: darken($section-light, 2%);
+    }
+    pre[class*="language-"] {
+      &::-webkit-scrollbar {
+        background-color: $section-light;
+      }
+      &::-webkit-scrollbar-thumb {
+        border: 2px solid $section-light;
+        background-color: $bg-light;
+      }
+    }
+    .token.comment,
+    .token.block-comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+      color: lighten($text-light, 20%);
+    }
+    .token.punctuation {
+      color: lighten($accent-two-light, 5%);
+    }
+    .token.tag,
+    .token.attr-name,
+    .token.namespace,
+    .token.deleted {
+      color: $accent-one-light;
+    }
+    .token.function-name {
+      color: $accent-two-light;
+    }
+    .token.boolean,
+    .token.number,
+    .token.function {
+      color: darken($accent-one-light, 5%);
+    }
+    .token.property,
+    .token.class-name,
+    .token.constant,
+    .token.symbol {
+      color: darken($accent-one-light, 5%);
+    }
+    .token.selector,
+    .token.important,
+    .token.atrule,
+    .token.keyword,
+    .token.builtin {
+      color: darken($accent-two-light, 5%);
+    }
+    .token.string,
+    .token.char,
+    .token.attr-value,
+    .token.regex,
+    .token.variable {
+      color: darken($accent-two-light, 8%);
+    }
+    .token.operator,
+    .token.entity,
+    .token.url {
+      color: $accent-two-light;
+    }
+    .token.inserted {
+      color: lighten($accent-two-light, 15%);
+    }
+    // Prism Js Styles ===========
+  }
+}
