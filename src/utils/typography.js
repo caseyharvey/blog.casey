@@ -2,9 +2,9 @@ import Typography from "typography"
 
 const typography = new Typography({
   baseFontSize: "18px",
-  baseLineHeight: "1.67",
-
-  headerFontFamily: ["Quicksand", "sans-serif"],
+  baseLineHeight: "1.5",
+  headerWeight: "500",
+  headerFontFamily: ["Montserrat", "sans-serif"],
   bodyFontFamily: ["Quicksand", "sans-serif"],
 })
 
