@@ -45,6 +45,7 @@ const Bio = () => {
       }}
     >
       <Image
+        className="avatar"
         fixed={data.avatar.childImageSharp.fixed}
         alt={author.name}
         style={{

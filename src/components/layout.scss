@@ -177,6 +177,10 @@ body {
       border-left: 4px solid $bg-light;
     }
 
+    .avatar {
+      filter: hue-rotate(210deg) saturate(60%) brightness(1.4);
+    }
+
     // Prism Js Styles ===========
     code[class*="language-"],
     pre[class*="language-"] {
