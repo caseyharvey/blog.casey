@@ -1,7 +1,8 @@
 import { Link } from "gatsby"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import React from "react"
-import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"
+import { faAdjust } from "@fortawesome/free-solid-svg-icons"
+// import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { rhythm, scale } from "../utils/typography"
@@ -71,11 +72,12 @@ const Layout = ({ location, title, children }) => {
               className="light-dark-btn"
               onClick={() => toggleTheme(theme === "dark" ? "light" : "dark")}
             >
-              {theme === "dark" ? (
+              {/* {theme === "dark" ? (
                 <FontAwesomeIcon icon={faSun} />
               ) : (
                 <FontAwesomeIcon icon={faMoon} />
-              )}
+              )} */}
+              <FontAwesomeIcon icon={faAdjust} />
             </button>
           )}
         </ThemeToggler>
