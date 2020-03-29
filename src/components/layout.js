@@ -1,10 +1,8 @@
+import { faAdjust } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "gatsby"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import React from "react"
-import { faAdjust } from "@fortawesome/free-solid-svg-icons"
-// import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { rhythm, scale } from "../utils/typography"
 import "./layout.scss"
 import "./prism.scss"
