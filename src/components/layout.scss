@@ -27,6 +27,21 @@ body {
       text-decoration: none;
     }
 
+    .bio {
+      display: flex;
+      margin-bottom: 2rem;
+
+      .avatar {
+        width: 65px;
+        height: 65px;
+        margin-right: 1rem;
+      }
+
+      p {
+        width: 70%;
+      }
+    }
+
     blockquote {
       font-style: italic;
       padding-left: 1rem;
@@ -59,6 +74,10 @@ body {
 
     a {
       color: $accent-two;
+    }
+
+    .avatar {
+      fill: $accent-one;
     }
 
     blockquote {
@@ -166,13 +185,13 @@ body {
       color: $accent-two-light;
     }
 
+    .avatar {
+      fill: $accent-two-light;
+    }
+
     blockquote {
       color: lighten($text-light, 10%);
       border-left: 4px solid $bg-light;
-    }
-
-    .avatar {
-      filter: hue-rotate(210deg) saturate(60%) brightness(1.4);
     }
 
     // Prism Js Styles ===========
