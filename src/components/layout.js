@@ -1,9 +1,8 @@
-import { faAdjust } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import ThemeToggle from "./ThemeToggle"
 import { Link } from "gatsby"
-import { ThemeToggler } from "gatsby-plugin-dark-mode"
+
 import React from "react"
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 import "./layout.scss"
 import "./prism.scss"
 
@@ -15,15 +14,13 @@ const Layout = ({ location, title, children }) => {
     header = (
       <h1
         style={{
-          ...scale(1.5),
+          fontSize: `1.5rem`,
           marginBottom: rhythm(1.5),
           marginTop: 0,
         }}
       >
         <Link
           style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
             color: `inherit`,
           }}
           to={`/`}
@@ -36,13 +33,12 @@ const Layout = ({ location, title, children }) => {
     header = (
       <h3
         style={{
+          fontSize: `1.5rem`,
           marginTop: 0,
         }}
       >
         <Link
           style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
             color: `inherit`,
           }}
           to={`/`}
@@ -64,21 +60,7 @@ const Layout = ({ location, title, children }) => {
     >
       <header>{header}</header>
       <main>
-        <ThemeToggler>
-          {({ theme, toggleTheme }) => (
-            <button
-              className="light-dark-btn"
-              onClick={() => toggleTheme(theme === "dark" ? "light" : "dark")}
-            >
-              {/* {theme === "dark" ? (
-                <FontAwesomeIcon icon={faSun} />
-              ) : (
-                <FontAwesomeIcon icon={faMoon} />
-              )} */}
-              <FontAwesomeIcon icon={faAdjust} />
-            </button>
-          )}
-        </ThemeToggler>
+        <ThemeToggle />
         {children}
       </main>
       <footer>

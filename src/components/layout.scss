@@ -14,23 +14,17 @@ $accent-two-light: #10a0aa;
 body {
   .main-container {
     position: relative;
-    a {
-      text-decoration: none;
-    }
 
     .light-dark-btn {
-      right: 22.5px;
-      padding: 0;
-      top: 35px;
-      border: none;
-      appearance: none;
-      font-size: 1.4rem;
+      top: 38px;
+      right: 18px;
+      width: 35px;
+      height: 35px;
       position: absolute;
-      background-color: transparent;
-      &:active,
-      &:focus {
-        outline: none;
-      }
+      fill: currentColor;
+    }
+    a {
+      text-decoration: none;
     }
 
     blockquote {
