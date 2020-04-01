@@ -12,52 +12,19 @@ const Layout = ({ location, title, children }) => {
 
   if (location.pathname === rootPath) {
     header = (
-      <h1
-        style={{
-          fontSize: `1.5rem`,
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
+      <h1 className="heading1">
+        <Link to={`/`}>{title}</Link>
       </h1>
     )
   } else {
     header = (
-      <h3
-        style={{
-          fontSize: `1.5rem`,
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
+      <h3>
+        <Link to={`/`}>{title}</Link>
       </h3>
     )
   }
   return (
-    <div
-      style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-        maxWidth: rhythm(28),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-      }}
-      className="main-container"
-    >
+    <div className="main-container">
       <header>{header}</header>
       <main>
         <ThemeToggle />

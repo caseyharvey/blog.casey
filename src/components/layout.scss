@@ -13,15 +13,23 @@ $accent-two-light: #10a0aa;
 
 body {
   .main-container {
+    margin: 2rem auto;
+    padding: 0 0.8rem;
+    max-width: 850px;
     position: relative;
 
     .light-dark-btn {
-      top: 38px;
-      right: 18px;
+      top: 0;
+      right: 0.8rem;
       width: 35px;
       height: 35px;
       position: absolute;
       fill: currentColor;
+    }
+
+    .heading1 {
+      font-size: 1.7rem;
+      margin-bottom: 2.5rem;
     }
 
     a {
@@ -30,14 +38,12 @@ body {
 
     .bio {
       display: flex;
-      margin-bottom: 2rem;
-
+      margin-bottom: 1rem;
       .avatar {
         width: 65px;
         height: 65px;
         margin-right: 1rem;
       }
-
       p {
         width: 70%;
       }
@@ -52,7 +58,8 @@ body {
 
 .dark {
   color: $text;
-  background-color: $bg;
+  background-color: $section;
+  // background-color: $bg;
 
   .main-container {
     background-color: $section;
@@ -65,18 +72,22 @@ body {
     h2,
     h3 {
       color: $accent-one;
+      a {
+        color: $accent-one;
+      }
     }
 
     h4,
     h5,
     h6 {
       color: $accent-two;
+      a {
+        color: $accent-two;
+      }
     }
-
     a {
       color: $accent-two;
     }
-
     .avatar {
       fill: $accent-one;
     }
@@ -161,7 +172,7 @@ body {
 }
 .light {
   color: $text-light;
-  background-color: $bg-light;
+  background-color: $section-light;
 
   .main-container {
     background-color: $section-light;
@@ -174,18 +185,22 @@ body {
     h2,
     h3 {
       color: $accent-one-light;
+      a {
+        color: $accent-one-light;
+      }
     }
 
     h4,
     h5,
     h6 {
       color: $accent-two-light;
+      a {
+        color: $accent-two-light;
+      }
     }
-
     a {
       color: $accent-two-light;
     }
-
     .avatar {
       fill: $accent-two-light;
     }
@@ -266,5 +281,27 @@ body {
       color: lighten($accent-two-light, 15%);
     }
     // Prism Js Styles ===========
+  }
+}
+
+@media screen and (min-width: 375px) {
+  body {
+    .main-container {
+      padding: 0 1rem;
+      .light-dark-btn {
+        right: 1rem;
+      }
+    }
+  }
+}
+@media screen and (min-width: 550px) {
+  body {
+    .main-container {
+      padding: 0 2rem;
+      margin: 3rem auto;
+      .light-dark-btn {
+        right: 2rem;
+      }
+    }
   }
 }
