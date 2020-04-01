@@ -37,15 +37,20 @@ body {
     }
 
     .bio {
+      height: 60px;
       display: flex;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       .avatar {
-        width: 65px;
-        height: 65px;
+        width: 60px;
         margin-right: 1rem;
       }
       p {
+        margin: 0;
         width: 70%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-display: column;
       }
     }
 
