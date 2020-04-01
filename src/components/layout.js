@@ -1,10 +1,8 @@
-import ThemeToggle from "./ThemeToggle"
 import { Link } from "gatsby"
-
 import React from "react"
-import { rhythm } from "../utils/typography"
 import "./layout.scss"
 import "./prism.scss"
+import ThemeToggle from "./ThemeToggle"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
