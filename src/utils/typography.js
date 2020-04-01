@@ -4,7 +4,7 @@ const typography = new Typography({
   baseFontSize: "18px",
   baseLineHeight: "1.5",
   headerWeight: "500",
-  headerFontFamily: ["Montserrat", "sans-serif"],
+  headerFontFamily: ["Quicksand", "sans-serif"],
   bodyFontFamily: ["Quicksand", "sans-serif"],
 })
 
