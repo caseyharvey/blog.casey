@@ -75,19 +75,13 @@ body {
 
     h1,
     h2,
-    h3 {
-      color: $accent-one;
-      a {
-        color: $accent-one;
-      }
-    }
-
+    h3,
     h4,
     h5,
     h6 {
-      color: $accent-two;
+      color: $accent-one;
       a {
-        color: $accent-two;
+        color: $accent-one;
       }
     }
     a {
@@ -188,19 +182,13 @@ body {
 
     h1,
     h2,
-    h3 {
-      color: $accent-one-light;
-      a {
-        color: $accent-one-light;
-      }
-    }
-
+    h3,
     h4,
     h5,
     h6 {
-      color: $accent-two-light;
+      color: $accent-one-light;
       a {
-        color: $accent-two-light;
+        color: $accent-one-light;
       }
     }
     a {
